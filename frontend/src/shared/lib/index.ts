@@ -1,0 +1,1 @@
+/** Helpers puros (sin React). */

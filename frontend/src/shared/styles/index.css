@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0f172a;
+    --color-primary-hover: #1e293b;
+    --color-accent: #f97316;
+    --color-accent-hover: #ea580c;
+    --color-success: #16a34a;
+    --color-warning: #d97706;
+    --color-danger: #dc2626;
+    --color-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f8fafc;
+    --color-bg-tertiary: #f1f5f9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    @apply text-[14px] md:text-[16px];
+    overflow-x: clip;
+  }
+
+  body {
+    @apply min-h-screen antialiased selection:bg-slate-900 selection:text-white transition-colors duration-150;
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+
+  .premium-shadow {
+    box-shadow: 0 40px 65px -12px rgba(15, 23, 42, 0.04);
+  }
+
+  .admin-sidebar {
+    @apply bg-slate-950 text-white min-h-screen sticky top-0 border-r border-white/10;
+  }
+}
+
+/* Animations for professional look */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
